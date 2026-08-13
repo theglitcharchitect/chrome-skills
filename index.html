@@ -132,6 +132,35 @@ ul.notes li::before{content:"";position:absolute;left:2px;top:9px;width:7px;heig
   .toc{background:transparent;border:none}
   .toc-inner{padding:0}
 }
+
+/* --- v2 visual enhancements --- */
+.hero-art{display:block;width:100%;max-width:680px;height:auto;margin:38px 0 4px;border:1px solid var(--border);border-radius:16px;box-shadow:var(--shadow)}
+.hero-art .f-soft{fill:var(--soft)}
+.hero-art .f-soft2{fill:var(--soft-2)}
+.hero-art .f-canvas{fill:var(--canvas)}
+.hero-art .f-border{fill:var(--border)}
+.hero-art .f-text{fill:var(--text)}
+.hero-art .f-accent{fill:var(--accent)}
+.hero-art .f-t2{fill:var(--text-2)}
+.hero-art .s-border{stroke:var(--border)}
+.hero-art .s-accent{stroke:var(--accent)}
+.hero-cap{max-width:680px;color:var(--text-2);font-size:12.5px;margin:0 0 4px}
+.howto{max-width:var(--maxw);margin:6px auto 0;padding:14px 32px 4px}
+.howto-h{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);font-weight:600;margin:0 0 16px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.step{background:var(--soft);border:1px solid var(--border);border-radius:14px;padding:20px}
+.step .ic{width:34px;height:34px;color:var(--accent);margin-bottom:12px;display:block}
+.step .n{font-size:11px;font-weight:700;color:var(--accent);letter-spacing:.06em;text-transform:uppercase;margin:0 0 4px}
+.step h3{margin:0 0 6px;font-size:16px;letter-spacing:-.01em}
+.step p{margin:0;color:var(--text-2);font-size:14px;line-height:1.5}
+.official{max-width:var(--maxw);margin:20px auto 0;padding:0 32px}
+.official a{display:flex;gap:14px;align-items:center;background:var(--accent-soft);border:1px solid color-mix(in srgb,var(--accent) 30%,transparent);border-radius:14px;padding:15px 18px;text-decoration:none;color:var(--text)}
+.official a:hover{border-color:var(--accent);text-decoration:none}
+.official .g{flex:0 0 auto;width:28px;height:28px;color:var(--accent)}
+.official .txt b{display:block;font-size:14.5px;letter-spacing:-.01em}
+.official .txt span{color:var(--text-2);font-size:13px}
+.official .arr{margin-left:auto;color:var(--accent);font-size:20px;font-weight:600}
+@media (max-width:780px){.steps{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -151,6 +180,70 @@ ul.notes li::before{content:"";position:absolute;left:2px;top:9px;width:7px;heig
     <div class="stat"><b>8&#215;8</b><span>Red-team + polish passes each</span></div>
     <div class="stat"><b>100%</b><span>Copy-ready blocks</span></div>
   </div>
+  <svg class="hero-art" viewBox="0 0 680 384" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagram: Gemini in Chrome running a saved Skill across the current page plus selected tabs">
+    <rect x="12" y="12" width="656" height="360" rx="18" class="f-soft s-border"/>
+    <path d="M12 30a18 18 0 0 1 18-18h620a18 18 0 0 1 18 18v28H12z" class="f-soft2"/>
+    <circle cx="40" cy="35" r="6" fill="#ef6a5f"/><circle cx="62" cy="35" r="6" fill="#f4bd4e"/><circle cx="84" cy="35" r="6" fill="#57c26a"/>
+    <rect x="116" y="21" width="150" height="28" rx="9" class="f-canvas"/>
+    <circle cx="132" cy="35" r="4" class="f-t2"/><rect x="144" y="31" width="92" height="8" rx="4" class="f-border"/>
+    <rect x="276" y="21" width="150" height="28" rx="9" class="f-accent" opacity="0.16"/>
+    <circle cx="292" cy="35" r="4" class="f-accent"/><rect x="304" y="31" width="92" height="8" rx="4" class="f-accent" opacity="0.5"/>
+    <rect x="436" y="21" width="150" height="28" rx="9" class="f-accent" opacity="0.16"/>
+    <circle cx="452" cy="35" r="4" class="f-accent"/><rect x="464" y="31" width="92" height="8" rx="4" class="f-accent" opacity="0.5"/>
+    <text x="600" y="40" font-family="Menlo,Consolas,monospace" font-size="12" class="f-t2">3 tabs</text>
+    <rect x="32" y="78" width="368" height="270" rx="12" class="f-canvas s-border"/>
+    <rect x="54" y="102" width="150" height="14" rx="7" class="f-text" opacity="0.72"/>
+    <rect x="54" y="130" width="324" height="9" rx="4.5" class="f-border"/>
+    <rect x="54" y="148" width="312" height="9" rx="4.5" class="f-border"/>
+    <rect x="54" y="166" width="298" height="9" rx="4.5" class="f-border"/>
+    <rect x="54" y="200" width="150" height="92" rx="10" class="f-soft2"/>
+    <rect x="216" y="200" width="150" height="92" rx="10" class="f-soft2"/>
+    <rect x="54" y="308" width="230" height="9" rx="4.5" class="f-border"/>
+    <rect x="412" y="78" width="236" height="270" rx="12" class="f-canvas s-border"/>
+    <circle cx="436" cy="104" r="10" class="f-accent"/>
+    <path d="M436 98l1.6 4.4 4.4 1.6-4.4 1.6-1.6 4.4-1.6-4.4-4.4-1.6 4.4-1.6z" class="f-canvas"/>
+    <rect x="454" y="99" width="120" height="10" rx="5" class="f-text" opacity="0.66"/>
+    <rect x="428" y="132" width="204" height="40" rx="9" class="f-accent" opacity="0.14"/>
+    <rect x="440" y="146" width="12" height="12" rx="3" class="f-accent"/>
+    <rect x="462" y="148" width="150" height="8" rx="4" class="f-accent" opacity="0.6"/>
+    <rect x="428" y="180" width="204" height="40" rx="9" class="f-soft2"/>
+    <rect x="440" y="196" width="120" height="8" rx="4" class="f-border"/>
+    <rect x="428" y="228" width="204" height="40" rx="9" class="f-soft2"/>
+    <rect x="440" y="244" width="150" height="8" rx="4" class="f-border"/>
+    <rect x="428" y="300" width="204" height="32" rx="16" class="f-soft2 s-border"/>
+    <text x="444" y="321" font-family="Menlo,Consolas,monospace" font-size="15" font-weight="700" class="f-accent">/</text>
+    <rect x="458" y="312" width="120" height="8" rx="4" class="f-border"/>
+  </svg>
+  <p class="hero-cap">How a Skill runs: it reads the active page plus any tabs you select, then returns a structured result in the Gemini panel &mdash; triggered with a single <code>/</code> command.</p>
+</div>
+
+<div class="howto">
+  <p class="howto-h">How Skills work</p>
+  <div class="steps">
+    <div class="step">
+      <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12a1 1 0 0 1 1 1v17l-7-4-7 4V4a1 1 0 0 1 1-1z"/></svg>
+      <p class="n">Step 1</p><h3>Save a prompt</h3>
+      <p>Write a prompt you&#39;ll reuse, then save it as a Skill straight from your Gemini in Chrome chat history.</p>
+    </div>
+    <div class="step">
+      <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="13" height="13" rx="2"/><path d="M8 7V4h13v13h-3"/></svg>
+      <p class="n">Step 2</p><h3>Select your tabs</h3>
+      <p>Open the pages you want to work across &mdash; a Skill runs on the current page plus any other tabs you select.</p>
+    </div>
+    <div class="step">
+      <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+      <p class="n">Step 3</p><h3>Run with &ldquo;/&rdquo;</h3>
+      <p>Type <code>/</code> or click <code>+</code> in Gemini in Chrome, pick your Skill, and it runs in one click. Manage saved Skills from the compass icon.</p>
+    </div>
+  </div>
+</div>
+
+<div class="official">
+  <a href="https://blog.google/products-and-platforms/products/chrome/skills-in-chrome/" target="_blank" rel="noopener">
+    <svg class="g" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z" fill="currentColor" stroke="none"/></svg>
+    <span class="txt"><b>Built on Google&#39;s &ldquo;Skills in Chrome&rdquo;</b><span>Read the official announcement &mdash; launched April&nbsp;14,&nbsp;2026 for Gemini in Chrome on desktop.</span></span>
+    <span class="arr">&rarr;</span>
+  </a>
 </div>
 
 <div class="wrap">
